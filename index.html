@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desenvolva uma página com um reminder para beber água">
+    <meta name="keywords" content="HTML, CSS, JS">
+    <meta name="author" content="Felipe Eduardo">
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>um reminder para beber água</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="src/img/avatar.svg" alt="avatar">
+
+            <div class="welcome">
+                <span>Bem-Vindo,</span>
+                <span id="name">Felipe <img src="src/img/hello.svg" alt="emoji mão acenando"></span>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <div class="content">
+                <main>
+                    <span id="percentage">80%</span>
+                    <img src="src/img/water.svg" alt="Copo com água">
+
+                    <div>
+                        <h1>Beber água</h1>
+                        <span id="goal">Meta: 3L</span>
+                    </div>
+                </main>
+            </div>
+
+            <div class="controlsContainer">
+                <div class="controls">
+                    <div class="goal">
+                        <div class="goalTitle">
+                            <label for="dailyGoal">Meta diária</label>
+                            <output id="dailyGoalValue">3000mL</output>
+                        </div>
+                        <input type="range" name="dailyGoal" id="dailyGoal" min="1000" max="5000" step="100" value="3000">
+                    </div>
+                </div>
+
+                <div class="quantity">
+                    <div class="quantityTitle">
+                        <label for="goalQuantity">Quantidade por timer</label>
+                        <output id="quantityValue">300mL</output>
+                    </div>
+                    <input type="range" name="dailyQuantity" id="dailyQuantity" min="100" max="500" step="100" value="300">
+                </div>
+
+                <div class="countdown">
+                    <div class="hours">
+                        <span>00</span>
+                    </div>
+                    <span class="indicators">h</span>
+                    <span id="dots">:</span>
+                    <div class="minutes">
+                        <span>00</span>
+                    </div>
+                    <span class="indicators">m</span>
+                </div>
+
+                <div class="button">
+                    <button id="start">Começar <img src="src/img/arrow.svg" alt=""></button>
+                </div>
+            </div> 
+        </div>
+
+        <div class="modalContainer">
+            <div class="modal">
+                <img src="src/img/close.svg" alt="" id="close">
+                <img src="src/img/water.svg" alt="copo com água">
+                <span>Lembrete para beber água!</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+</body>
+</html>
